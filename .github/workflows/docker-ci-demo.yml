@@ -40,5 +40,6 @@ jobs: # 작업 지정
         with:
           context: .
           push: true # 빌드 후 배포 여부 확인
+          platforms: linux/amd64,linux/arm64 
           tags: ${{ steps.docker_meta.outputs.tags }} # 빌드 시 위에서 지정한 태그 사용 지정
           labels: ${{ steps.docker_meta.outputs.labels }} # 빌드 시 위에서 지정한 라벨 사용 지정
